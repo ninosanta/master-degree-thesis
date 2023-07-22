@@ -1,0 +1,97 @@
+{
+  "author": "ninosanta",
+  "description": "Current weather conditions from OpenWeatherMap",
+  "gateway_specific_settings": {
+    "webthings": {
+      "exec": "{nodeLoader} {path}",
+      "primary_type": "adapter",
+      "strict_max_version": "*",
+      "strict_min_version": "0.10.0"
+    }
+  },
+  "homepage_url": "https://github.com/ninosanta",
+  "id": "owm-weather-adapter",
+  "license": "MPL-2.0",
+  "manifest_version": 1,
+  "name": "OWM Adapter",
+  "options": {
+    "default": {
+      "locations": [],
+      "units": "metric",
+      "provider": "OpenWeatherMap",
+      "pollInterval": 60,
+      "apiKey": "Put your own API in the default.txt file under the weater-keys folder"
+    },
+    "schema": {
+      "type": "object",
+      "required": [
+        "locations",
+        "units",
+        "provider",
+        "pollInterval"
+      ],
+      "properties": {
+        "locations": {
+          "title": "Locations",
+          "description": "List of locations",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "latitude",
+              "longitude"
+            ],
+            "properties": {
+              "name": {
+                "title": "Name",
+                "description": "Name of location",
+                "type": "string"
+              },
+              "latitude": {
+                "title": "Latitude",
+                "description": "Latitude of location",
+                "type": "number"
+              },
+              "longitude": {
+                "title": "Longitude",
+                "description": "Longitude of location",
+                "type": "number"
+              }
+            }
+          }
+        },
+        "units": {
+          "title": "Units",
+          "description": "Units to use, i.e. imperial for \u02daF, metric for \u02daC",
+          "type": "string",
+          "enum": [
+            "metric",
+            "imperial"
+          ]
+        },
+        "provider": {
+          "title": "Provider",
+          "description": "Weather data provider to use",
+          "type": "string",
+          "enum": [
+            "OpenWeatherMap"
+          ]
+        },
+        "pollInterval": {
+          "title": "Poll Interval",
+          "description": "Interval in minutes (minimum 60) at which to poll the provider",
+          "type": "integer",
+          "minimum": 60
+        },
+        "apiKey": {
+          "title": "API Key",
+          "description": "Put your own API in the default.txt file under the weater-keys folder",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "short_name": "OWM Adapter",
+  "version": "1.0.0"
+}

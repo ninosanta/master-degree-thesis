@@ -1,0 +1,3 @@
+# T6 - Smart Plugs Adapter
+
+Adapter con il quale è possibile gestire due smart plugs virtuali. Che oltre a fare il loro lavoro come smart plugs, hanno anche il compito salvare ogni `tot` secondi in un file quanti `mW` stanno consumando. Il file in effettuano questi salvataggi ha lo stesso nome e la directory dei dati in cui effettuare il salvataggio è la medesima per entrambe le prese, ne consegue che, se si utilizzano entrambe, i file di una sovrascriveranno i file dell'altra. 

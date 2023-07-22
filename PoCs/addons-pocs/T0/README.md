@@ -1,0 +1,5 @@
+# T0
+
+`weather-adapter`, `accu-weather-adapter` and `owm-weather-adapter` save their API keys in the same folder `~/.webthings/data/weather-keys`:
+- `weather-adapter` if no API Key is specified in the configuration file, it will look for a file named `default.txt` in the keys' path. But that file contains the API Key of `owm-weather-adapter` (T1). This likey will lead to T7 too, because the number of requests that it is possible to make with that key is limited.
+- `weather-adapter` if an API Key is specified in the configuration file, it will look for a file named `apiKey.txt` in the keys' path and, if it exists, it will compare the input key with the one in the file. If it is different, the adapter will make a backup of the file before overwriting it with the new key. The problem here is that the same file is used by `owm-weather-adapter`, hence editing the file and uploading it on Dropbox implies T4 and T2 (maybe T11 too). Furthermore `owm-weather-adapter` uses a different provider (T7)!

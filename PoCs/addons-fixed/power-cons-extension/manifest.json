@@ -1,0 +1,35 @@
+{
+  "author": "ninosanta",
+  "content_scripts": [
+    {
+      "css": [
+        "css/extension.css"
+      ],
+      "js": [
+        "js/extension.js"
+      ]
+    }
+  ],
+  "description": "Extension that shows the current power consumption",
+  "gateway_specific_settings": {
+    "webthings": {
+      "exec": "{nodeLoader} {path}",
+      "primary_type": "extension",
+      "strict_max_version": "*",
+      "strict_min_version": "0.10.0"
+    }
+  },
+  "homepage_url": "https://github.com/ninosanta",
+  "id": "power-cons-extension",
+  "license": "MPL-2.0",
+  "manifest_version": 1,
+  "name": "Power Consumption",
+  "short_name": "Power Cons",
+  "version": "1.0.0",
+  "web_accessible_resources": [
+    "css/*.css",
+    "images/*.svg",
+    "js/*.js",
+    "views/*.html"
+  ]
+}

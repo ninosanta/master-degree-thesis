@@ -1,0 +1,42 @@
+{
+  "author": "ninosanta",
+  "description": "Smart Plug 03 Adapter",
+  "gateway_specific_settings": {
+    "webthings": {
+      "exec": "{nodeLoader} {path}",
+      "primary_type": "adapter",
+      "strict_max_version": "*",
+      "strict_min_version": "0.10.0"
+    }
+  },
+  "homepage_url": "https://github.com/ninosanta",
+  "id": "smart-plug-adapter",
+  "license": "MPL-2.0",
+  "manifest_version": 1,
+  "name": "Viartual Plug 03",
+  "options": {
+    "default": {
+      "persistPropertyValues": false,
+      "randomizePropertyValues": false
+     },
+    "schema": {
+      "type": "object",
+      "required": [
+        "persistPropertyValues",
+        "randomizePropertyValues"
+      ],
+      "properties": {
+        "persistPropertyValues": {
+          "description": "Whether or not to persist property values across restarts",
+          "type": "boolean"
+        },
+        "randomizePropertyValues": {
+          "description": "Whether or not to periodically generate new property values",
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "short_name": "Smart Plug 03",
+  "version": "1.0.0"
+}

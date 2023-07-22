@@ -1,0 +1,49 @@
+{
+  "author": "ninosanta",
+  "description": "Smart Plug 01 Adapter",
+  "gateway_specific_settings": {
+    "webthings": {
+      "exec": "{nodeLoader} {path}",
+      "primary_type": "adapter",
+      "strict_max_version": "*",
+      "strict_min_version": "0.10.0"
+    }
+  },
+  "homepage_url": "https://github.com/ninosanta",
+  "id": "plug-smart-adapter",
+  "license": "MPL-2.0",
+  "manifest_version": 1,
+  "name": "Viartual Plug 01",
+  "options": {
+    "default": {
+      "persistPropertyValues": false,
+      "randomizePropertyValues": false,
+      "plug01PowerInterval": 5
+     },
+    "schema": {
+      "type": "object",
+      "required": [
+        "persistPropertyValues",
+        "randomizePropertyValues",
+        "plug01PowerInterval"
+      ],
+      "properties": {
+        "persistPropertyValues": {
+          "description": "Whether or not to persist property values across restarts",
+          "type": "boolean"
+        },
+        "randomizePropertyValues": {
+          "description": "Whether or not to periodically generate new property values",
+          "type": "boolean"
+        },
+        "plug01PowerInterval": {
+          "description": "How many seconds have to pass between two consecutives Power measures for plug 0",
+          "type": "integer",
+          "minimum": 5
+        }
+      }
+    }
+  },
+  "short_name": "Smart Plug 01",
+  "version": "1.0.0"
+}

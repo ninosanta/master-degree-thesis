@@ -1,0 +1,30 @@
+{
+  "name": "plug-smart-adapter",
+  "version": "1.0.0",
+  "description": "Virtual Smart Plugs Adapter",
+  "main": "index.js",
+  "homepage": "https://github.com/WebThingsIO/virtual-things-adapter",
+  "author": "WebThingsIO",
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WebThingsIO/virtual-things-adapter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WebThingsIO/virtual-things-adapter/issues"
+  },
+  "dependencies": {
+    "mkdirp": "^1.0.4",
+    "node-persist": "^3.1.0",
+    "uuid": "^8.3.1"
+  },
+  "files": [
+    "LICENSE",
+    "SHA256SUMS",
+    "index.js",
+    "manifest.json",
+    "static/image.png",
+    "static/video.mp4",
+    "virtual-things-adapter.js"
+  ]
+}

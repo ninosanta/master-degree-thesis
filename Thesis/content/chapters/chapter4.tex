@@ -1,0 +1,292 @@
+\chapter{Case Studies}
+\label{experiments}
+
+To validate the Proofs of Concept (\glspl{poc}) two online surveys were conceived with different goals and aiming at different figures as respondents for skills and experiences.
+
+\section{Experts Survey}
+\label{sec:expert_surv}
+
+The evaluation of the \glspl{poc} was a crucial task. Hence, my supervisors and I organized a brainstorming meeting session to define the best way to proceed. The meeting was held in the presence of the members of the e-Lite research group\footnote{e-Lite Research Group: \href{https://elite.polito.it}{elite.polito.it}} of the Politecnico di Torino. The group's main research fields are \textit{Human-Computer Interaction}, \textit{Ubiquitous Computing}, and \textit{Artificial Intelligence}. During this meeting, we presented the idea behind the thesis project and some drafts of the \glspl{poc} implemented. Afterward, we discussed the necessity of validating the quality of the developed \glspl{poc}. The main goal was to demonstrate that those \glspl{poc} could be developed by inexperienced programmers. Finally, we decided to take advantage of a validation through a survey with a large sample of users. However, before giving the PoCs to these users, we felt the necessity of a preliminary validation that should have been done by a set of experts. This team was composed by five members that were involved in the brainstorming session. Among them, there was: one full professor, one associate professor, two assistant professors, and one Ph.D. student. Each of them belongs to the e-Lite research group of Politecnico di Torino.
+These experts had to evaluate the \glspl{poc} through an online survey before moving on to the user study.
+
+The conducted survey contains a snippet for each Proof of Concept and the description of the expected behavior of the add-on running that code. The experts had to find out the problems in the snippets' code and evaluate whether each error in the Proofs of Concept could be considered a development error. The experts expressed their evaluation through a numeric five-level Likert Scale \cite{joshi2015likert}. The higher the evaluation of the snippet, the higher the confidence that its problem is just a simple development error. In the end, we took into account also the cases in which no error in the snipped was detected.
+
+
+
+\subsection{Results}
+\label{sec:expert_surv_res}
+
+\autoref{tab:expert_survey_res}  shows the results of the experts' survey specifying the score the experts assigned to each add-on and how many experts, out of five, have found the threat inside the code by performing the survey. Furthermore, the fact that some of the experts did not find any threat in some add-ons was considered a positive thing --- for what concerns the \glspl{poc} --- because it enforced the belief that some errors are not so easy to spot even to experienced programmers.
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{| l | c | c |}
+     \hline
+     \textbf{Add-on (threat)} & \textbf{Times that was spotted} & \textbf{Average score} \\
+     \hline
+     \texttt{weather-adapter} (T1) & 4  &  3 \\
+     \hline
+     \texttt{weather-adapter} (T2) & 5 & 3.8 \\
+     \hline
+     \texttt{lights-off-extension} (T3) & 4 & 3.5 \\
+     \hline
+     \texttt{smart-plugs-adapter} (T4) & 4 & 4.75 \\
+     \hline
+     \texttt{things-off-extension} (T5) & 5 & 4.4 \\
+     \hline
+     \texttt{power-cons-extension} (T6-v1) & 3 & 3.3 \\
+     \hline
+     \texttt{plug-smart-adapter} (T6-v2) & 5 & 3.4 \\
+     \hline
+     \texttt{things-off-extension} (T7) & 5 & 3.8 \\
+     \hline
+     \texttt{smart-plug-adapter} (T8) & 3 & 4.33 \\
+    \hline
+    \end{tabular}
+    \caption{Experts' survey result}
+    \label{tab:expert_survey_res}
+\end{table}
+
+During the brainstorming session, it was decided that only the snippets that would have obtained a score greater than $3$ would go to the next phase. Since the results were above that minimum threshold, all of the developed add-ons --- with the exception of \texttt{power-cons-extension} (see \autoref{sec:usersurv}) ---  were selected for the next stage, i.e., the user study.
+
+\subsubsection{Comments}
+The experts gave also some interesting comments about some of the snippets. Among the things that were pointed out, I'll report the most remarkable ones.
+
+\begin{itemize}
+    
+    
+    \item \textbf{\texttt{power-cons-extension}} - Assistant professor: \textit{``the error that results in the threat occurrence is a conceptual error. While the other \glspl{poc} contain programming errors''};
+
+    \item \textbf{\texttt{smart-plugs-adapter}} - Associate professor: \textit{``this \gls{poc} has the error that is the hardest one to spot''};
+
+    \item \textbf{\texttt{things-off-extension} (T7)} - Full professor, associate professor, and assistant professor: \textit{``this \gls{poc} contains a very na{\"i}ve programming error is not so easy to spot by reading the code but some Integrated Development Environments (\glspl{ide}) may point it out''}.
+
+\end{itemize}
+
+\subsubsection{Other Proofs of Concept}
+The add-ons that were presented in this thesis and submitted to the experts do not represent the total amount of developed \glspl{poc}. In fact, during the development phase of this thesis, other \glspl{poc} were conceived, tested, and discussed. However, these \glspl{poc} were rejected because, during the preliminary evaluation phase with my supervisors, they seemed deliberately malicious rather than seem developed by a novice or a careless developer. This is also why they were not presented and described in this thesis, other than for brevity reasons.
+
+
+\section{User Surveys}
+\label{sec:usersurv}
+The total amount of developed \glspl{poc} is nine. Since, the objective was to asses a \gls{poc} for each threat and, among the \glspl{poc}, two regard T6 (i.e., \texttt{plug-smart-adapter} and \texttt{power-cons-extension}), for the sake of a balanced threats distribution of two snippets implementing threats per survey, and a total amount of four surveys, the only add-on between them that took part to the user study was the one that received a higher evaluation from the experts' feedback, i.e., \texttt{plug-smart-adapter}. Furthermore, to avoid answers being influenced by the snippets' order, the order of appearance of each snippet was randomized.
+Moreover, to lower the abandonment rate, the survey should not last for too long and not contain too many snippets. Hence, for each survey, a participant has to assess four snippets and understand whether a snippet leads the Smart Home to an undesired behavior and explain where the problem is and why. To not bias the participants, each survey contains half of the snippets (i.e., two out of four) that implement a threat while the other half of the snippets (i.e., two out of four) are fixed ones taken among our set of \glspl{poc}. 
+
+Each survey also contains a final part that asks the participants questions about their background (e.g., study title, years of experience in programming, etc.) and knowledge about \texttt{JavaScript} and \glspl{shg}.
+
+To get a high participation rate and a user base as heterogeneous as possible, we shared the surveys:
+\begin{itemize}
+    \item On WebThings' official forum\footnote{Mozilla Discourse - IoT - WebThings: \href{https://discourse.mozilla.org/c/iot/252}{discourse.mozilla.org/c/iot/252}};
+    
+    \item Among a sample of Politecnico di Torino students that we were sure had the background to answer the questions because they attended a course of web development strongly focused on \texttt{JavaScript} (\texttt{JS}) and \texttt{JS} frameworks;
+
+    \item On a subreddit about surveys\footnote{Reddit - SampleSize: \href{https://www.reddit.com/r/SampleSize/}{reddit.com/r/SampleSize}} by specifying who our participant targets were;
+
+    \item On SurveyCircle\footnote{SurveyCircle: \href{https://www.surveycircle.com/en/}{surveycircle.com}} (i.e., a large community for online research) \& its related groups;
+
+    \item On a Telegram\footnote{Telegram Messenger: \href{https://telegram.org}{telegram.org}} group of Computer Engineering students at Politecnico di Torino.
+\end{itemize}
+\autoref{tab:surveys} shows the content of each survey and indicates with \textbf{Broken} a snippet coming from an add-on containing a threat occurrence; with \textbf{Fixed}, instead, a snippet coming from an add-on where the threat occurrence was removed:
+
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{| l | c | c | c | c |}
+     \hline
+     \textbf{Add-on (threat)} & \textbf{Survey 1} & \textbf{Survey 2} & \textbf{Survey 3} & \textbf{Survey 4} \\
+     \hline
+     \texttt{weather-adapter} (T1) & Broken  &  - & Fixed & Fixed \\
+     \hline
+     \texttt{weather-adapter} (T2) & -  & Broken & - & - \\
+     \hline
+     \texttt{lights-off-extension} (T3) & Broken & Fixed & - & - \\
+     \hline
+     \texttt{smart-plugs-adapter} (T4) & Fixed & - & Fixed & Broken \\
+     \hline
+     \texttt{things-off-extension} (T5) & - & Fixed & Broken & - \\
+     \hline
+     \texttt{plug-smart-adapter} (T6) & - & - & Broken & Fixed \\
+     \hline
+     \texttt{things-off-extension} (T7) & - & - & - & Broken \\
+     \hline
+     \texttt{smart-plug-adapter} (T8) & Fixed & Broken & - & - \\
+    \hline
+    \end{tabular}
+    \caption{Content of the user surveys}
+    \label{tab:surveys}
+\end{table}
+
+
+\subsection{Results}
+\label{sec:userstudyresults}
+While I am writing this thesis the user study is still ongoing to collect a higher number of answers. Therefore, the following are preliminary results.
+%that will be discussed not in \textit{quantitative} terms but, instead, in terms of \textit{percentages}. This is because the numbers involved may differ a lot in the future, i.e., at the end of the user study. While the percentages --- given that the sample of users involved until today should be fairly representative of the user population --- should remain almost unchanged.
+
+Each survey is composed of four snippets of code. Two of them contain a threat occurrence, while the other two do not contain any unexpected behavior. The latter were developed to fix the \glspl{poc} previously presented. The surveys were started $182$ times in \textit{total}, there were $157$ \textit{partial} compilations, and $25$ \textit{full} compilations considering also two participants who did not give their consent to participate to the study but still submitted their surveys. \autoref{tab:compilations} summarize these information. 
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{| l | c |}
+    \hline
+    & \textbf{Compilations}\\
+    \hline
+    \textbf{Total} & 182\\
+    \hline
+    \textbf{Partial} & 157\\
+    \hline
+    \textbf{Full} & 25\\
+    \hline
+    \textbf{No consent} & 2\\
+    \hline
+    \end{tabular}
+    \caption{Survey compilations}
+    \label{tab:compilations}
+\end{table}
+
+The results of the snippets containing threats will be now discussed.
+
+\begin{itemize}
+    \item \textbf{\texttt{weather-adapter} (T1)}: 1 participant out of 4 thought they have found the threat. However, the code lines and the undesired behavior described in its answer lead to the conclusion that the participant has not found the threat occurrence;
+
+    \item \textbf{\texttt{weather-adapter} (T2)}: none of the 5 participants reported to have found the threat;
+
+    \item \textbf{{\texttt{lights-off-extension} (T3)}}: 2 participants out of 4 thought they have found the threat. But, in this case, just one of them has really found it and considers it something accidental;
+
+    \item \textbf{\texttt{smart-plugs-adapter} (T4)}: 2 participants out of 5 stated to have found the threat. However, just one of them have really found it. Even in this case, it considers the threat something accidental;
+
+    \item \textbf{\texttt{things-off-extension} (T5)}: 3 participants out of 9 said to have found the threat, but their following answers lead to the conclusion that they have not found the threat occurrence;
+    
+    \item \textbf{\texttt{plug-smart-adapter} (T6)}: as before, 2 participants out of 9 said to have found the threat, but they have not;
+
+    \item \textbf{\texttt{things-off-extension} (T7)}: again, 2 participants out of 5 thought to have found the threat, but they have not;
+
+    \item \textbf{\texttt{smart-plug-adapter} (T8)}: none of the 5 participants reported to have found the threat.
+
+\end{itemize}
+Then, it is also worth to mention that some snippets with no threat occurrences were flagged as dangerous even though they were not. To be precise, 9 out of 46
+% (1+0+0+0+3+3+1+1) su (4+4+5+5+9+9+5+5)
+%(3+1+4+4+3) su (7 + 6 + 10 + 9 + 9 + 5)
+total answers about snippets without threat reported false positives. These snippets served to not bias the respondents and do not let them thinks that each PoC contains a threat occurrence.
+
+\textbf{\autoref{tab:studyresult}} shows, for each threat occurrence, how many users assessed the PoC, how many of them claimed to have found the threat, how many actually did, and --- among who found it --- how many labeled it as intentional. 
+%This table and the previous statistics also contain some answers coming from some surveys not completed till the end but considered worth to be included, e.g., because the respondents exited the survey by just leaving out the questions about their background.\\
+
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{| c | c | c | c | c | c |}
+    \hline
+    \textbf{PoC's threat} & \textbf{Users} & \textbf{Claimed found} & \textbf{Actually found} & \textbf{Intentional} \\
+    \hline
+    T1 & 4 & 1 & 0  & - \\
+    \hline
+    T2 & 5 & 0 & - & - \\
+    \hline
+    T3 & 4 & 2 & 1  & 0 \\
+    \hline
+    T4 & 5 & 2 & 1 & 0 \\
+    \hline
+    T5 & 9 & 3 & 0 & - \\
+    \hline
+    T6 & 9 & 2 & 0 & - \\
+    \hline
+    T7 & 5 & 2 & 0 & - \\
+    \hline
+    T8 & 5 & 0 & - & - \\
+    \hline
+    \end{tabular}
+    \caption{User study results}
+    \label{tab:studyresult}
+\end{table}
+
+To summarize these results, a very small amount of participants (i.e., 2 out of 23), spotted the threats and none of them categorized the behaviour as deliberate. Moreover, this happened for just two \glspl{poc} out of eight while, in the other ones, no one found the threat occurrence. Furthermore, since we chose to consider as validated each \gls{poc} recognized as containing a threat occurrence and then marked as not intentional by at least the $75\%$ of users, the results are excellent.  
+\\
+
+It is also interesting to report the data extracted from the questions about the background of the survey respondents. Thence, among the $23$ participants involved in the study, just one regularly use the WebThings \gls{shg} and another one used it in the past but not anymore. However, that number triples if we take into consideration the users that have heard in depth about WebThings, e.g., because they have read its documentation or saw a project that involved the \gls{shg}. Instead, 16 participants never heard about WebThings.
+The number of users that have heard about other \glspl{shg} is ten. The most known among the other \glspl{shg} is Home Assistant \cite{homehomeassistant} because, among the previous ten participants, the number of participants that have heard about it is five, instead, just one have ever heard of openHAB \cite{openhabhomepage}. Four are the participants that regularly use other \glspl{shg}, e.g., Home Assistant, Google Nest \cite{googlenesthome}, Amazon echo \cite{amazonecho} etc.
+Another relevant data is about the number of participants that have ever developed an add-on for a \gls{shg}, which is one. The \gls{shg} in question is Home Assistant. \autoref{tab:shgstats} summarizes these statistics about \glspl{shg}' popularity.
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{| l | c |}
+    \hline
+    \textbf{WebThings} & \textbf{Participants}\\
+    \hline
+    Regularly use it & 1\\
+    \hline
+    Used it in the past & 1\\
+    \hline
+    Just heard of it & 3\\
+    \hline
+    Use another \gls{shg} (e.g., Amazon echo, Home Assistant, etc.) & 4\\
+    \hline
+    Never heard about it & 16 \\
+    \hline
+    Have heard about other \glspl{shg} & 10\\
+    \hline
+    \textbf{Home Assistant} & \textbf{Participants}\\
+    \hline
+    Have heard about Home Assistant & 5\\
+    \hline
+    Have developed an add-on for Home Assistant & 1\\
+    \hline
+    \textbf{openHAB} & \textbf{Participants}\\
+    \hline
+    Have heard about openHAB & 1\\
+    \hline
+    \end{tabular}
+    \caption{SHG background statistics}
+    \label{tab:shgstats}
+\end{table}
+
+Most of the participants, $18$ out of $23$, were Italian. Other smaller percentages of participants were Indian (two), Canadian (one), Polish (one), and Iranian (one). Accordingly, \autoref{tab:nationality} shows shows a recap of the participants' nationalities. Among them, there were a few beginners with less than one year of programming background, but the vast majority of them were multi-years programmers and the average years of programming experience of the users population was $4.65$ years. Therefore, their average level of confidence from $1$ to $5$ with \texttt{JavaScript} was $2.9$.
+
+\begin{table}[h!]
+        \centering
+        \begin{tabular}{| l | c |}
+        \hline
+        \textbf{Nationality} & \textbf{Participants}\\
+        \hline
+        Italians & 18\\
+        \hline
+        Indians & 2\\
+        \hline
+        Polish & 1\\
+        \hline
+        Canadian & 1\\
+        \hline
+        Iranian & 1\\
+        \hline
+        \end{tabular}
+        \caption{Participants' nationality}
+        \label{tab:nationality}
+\end{table}
+    
+Lastly, among the channels through which the surveys were shared, the most effective one was the e-mail sent to the Web Application students of the Politecnico di Torino because it  attracted $12$ participants to the study. Sharing the surveys in the Telegram\footnote{Telegram Messenger: \href{https://telegram.org}{telegram.org}} group of Computer Engineering students at Politecnico di Torino brought four participants. Then, three were participants from the SampleSize\footnote{Reddit - SampleSize: \href{https://www.reddit.com/r/SampleSize/}{reddit.com/r/SampleSize}} subreddit, and two participants joined the survey after receiving it through direct message. Lastly, two participants were from SurveyCircle\footnote{SurveyCircle: \href{https://www.surveycircle.com/en/}{surveycircle.com}} related groups. \autoref{tab:sources} shows these statistics.
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{| l | c |}
+    \hline
+    \textbf{Source} & \textbf{Participants}\\
+    \hline
+    Email & 12\\
+    \hline
+    Telegram & 4\\
+    \hline
+    Reddit & 3\\
+    \hline
+    Direct Message & 2\\
+    \hline
+    SurveyCircle & 2\\
+    \hline
+    \end{tabular}
+    \caption{Surveys sharing platforms}
+    \label{tab:sources}
+\end{table}
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+% for glossary entry
+% @entry{bird,
+%     name={bird},
+%     description = {feathered animal},
+%     see={[see also]{duck,goose}}
+% }
+
+% if this bib file does not work, try using \input{file.tex}
+% where all the \newabbreviation commands have been inserted
+% containing all the definitions
+
+% Gls to capitalize first letter
+% GLS for full uppercase
+% for abbreviations also
+% glsxtrshort for abbreviation
+% similar for long, full, and capital configurations, add pl at the end for plurals
+% glsentryshort, long, plural (referred to shorts) must be used when in section titles
+% glslink to allow the link but use a different text (as for href)
+
+\newglossaryentry{web thing}
+{
+    name=web thing,
+    description={A web thing is a physical or virtual device connected to the network that can be managed through a data communication protocol, e.g., HTTP.}
+}
+
+\newglossaryentry{rules engine}
+{
+    name=rules engine,
+    description={The rules engine is a component of the WebThing Gateway. Its task is to instantiate rules and to implement actions. These actions are executed whenever the necessary conditions are met.}
+}
+
+\newglossaryentry{rules interface}
+{
+    name=rules interface,
+    description={It is the Rules Engine's interface through which instantiate the rules and the actions.}
+}
+
+
+\newglossaryentry{virtual machine}
+{
+    name=virtual machine,
+    description={A Virtual Machine (A virtual machine (\gls{vm}) is a software emulation of a physical machine that runs the operating system and apps as if they were in a physical one.}
+}
+
+% if you want to use also description for the abbreviations/acronyms, you should use bib2gls and define all the entries in a bib file, which is incompatible with Overleaf
+\newacronym{api}{API}{Application Programming Interface}
+\newacronym{shg}{SHG}{Smart Home Gateway}
+\newacronym{ifttt}{IFTTT}{If This Than That}
+\newacronym{ui}{UI}{User Interface}
+\newacronym{spa}{SPA}{Single Page Application}
+\newacronym{mvc}{MVC}{Model-View-Controller}
+\newacronym{dom}{DOM}{Document Object Model}
+\newacronym{iot}{IoT}{Internet of Things}
+\newacronym{poc}{PoC}{Proof of Concept}
+\newacronym{tm}{TM}{Threat Model}
+\newacronym{owm}{OWM}{OpenWeatherMap}
+\newacronym{uri}{URI}{Uniform Resource Identifier}
+\newacronym{ssd}{SSD}{Solid State Drive}
+\newacronym{jwt}{JWT}{\texttt{JSON} Web Token}
+\newacronym{dbms}{DBMS}{Database Management System}
+\newacronym{vm}{VM}{Virtual Machine}
+\newacronym{sdl}{SDL}{Security Development Lifecycle}
+\newacronym{ide}{IDE}{Integrated Development Environment}
+\newacronym{dfd}{DFD}{Data Flow Diagram}
+\newacronym{dos}{DoS}{Denial of Service}

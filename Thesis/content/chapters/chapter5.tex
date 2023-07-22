@@ -1,0 +1,25 @@
+\chapter{Conclusions}
+\label{conclusions}
+
+The basis of this thesis was a recently proposed threat model \cite{corno2022threat}. My focus was put on developing eight Proofs of Concept (\glspl{poc}) for implementing the first eight threat occurrences listed within the threat model.
+
+To demonstrate that those \glspl{poc} can also be the outcome of an inexperienced or careless programmer, they were validated through two different surveys. The first one involved a team of experts with the goal to understand whether the conceived \glspl{poc} were plausible as the outcome of a novice programmer (see \autoref{sec:expert_surv}). The second one involved a larger population of users to further validate these \glspl{poc} (see \autoref{sec:usersurv}). 
+
+This thesis shows the preliminary results of the user study. However, even though the user study is not yet concluded, the results are encouraging as far as concerns the aim of this thesis.
+
+The expert survey results (\autoref{sec:expert_surv_res}) showed off that the ideas behind the Proofs of Concept (\glspl{poc}) presented in \autoref{pocs} were solid. This solidity was then confirmed by the current outcome of the user study presented in \autoref{sec:userstudyresults}. In fact, having conducted the study on a sample of users well representative of a population of \textit{novice} developers permits
+%--- with a certain degree of confidence ---
+to express some conclusions and state that the guidelines expressed in the reference threat model \cite{corno2022threat} can be applied to a modern extensible Smart Home Gateway (\gls{shg}) like WebThings \cite{wtabout}. Furthermore, it applies not only in those situations where there is an attacker with malicious intent, but also when an inexperienced programmer may commit some errors. In fact, according to the collected preliminary results, the written add-ons (which implement the threats described in \autoref{sec:ref_tm}) could be the outcome of a distracted or novice programmer. Hence, having the threat model as a reference while developing add-ons or a feature for a \gls{shg} should be encouraged as a good practice.
+
+However, the user study and the related surveys are still open at the time of publication of this thesis, and they are getting more and more participants. Their outcome will be resumed in the future since a more in-depth study will be published as a follow-up to this thesis. Furthermore, it will possibly include and compare data obtained from other \glspl{shg}.
+
+
+\section{Future Works}
+\label{sec:future}
+
+In \autoref{t0appendix} was introduced the threat T0, i.e., \textit{a plug-in scope could overlap the scope of another attack target}. Since it was not further elaborated on in this thesis, it would be interesting if it were explored and developed in future studies and included in the threat model guidelines.\\
+
+The user study evidenced the difficulties in which a work like this thesis may incur to get valid survey participants. In this case, the more remarkable issue was the high survey abandonment rate highlighted in \autoref{tab:compilations}. I would recommend for future works, to avoid issues like this, to proceed by possibly submitting the surveys in person. Another possibility to encourage the participation may be to give some reward to those participants who fully complete the survey (e.g., gift cards, coupons, gadgets, etc.). This can be done by drawing a few winners or by giving the reward to each of them.\\
+
+Moreover, this work has focused on a single smart home gateway (WebThings), and the development of add-ons for it. It would be interesting to see threat implementations for other \glspl{shg} as well, e.g., Home Assistant \cite{homehomeassistant}, and openHAB \cite{openhabhomepage}. In particular, to understand whether the \glspl{poc} that have not been developed during this work (for the reasons indicated in \autoref{t91011poc}) can be developed for platforms having different characteristics than WebThings.
+A further study is currently underway to investigate Home Assistant.

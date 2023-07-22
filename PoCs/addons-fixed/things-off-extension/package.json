@@ -1,0 +1,25 @@
+{
+  "name": "things-off-extension",
+  "version": "1.0.0",
+  "description": "Extension add-on that turns off all the things",
+  "author": "ninosanta",
+  "main": "index.js",
+  "homepage": "https://github.com/ninosanta",
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://https://github.com/ninosanta"
+  },
+  "bugs": {
+    "url": "https://https://github.com/ninosanta"
+  },
+  "files": [
+    "README.md",
+    "css/extension.css",
+    "images/menu-icon.svg",
+    "index.js",
+    "js/extension.js",
+    "manifest.json",
+    "views/content.html"
+  ]
+}
